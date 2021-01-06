@@ -1,0 +1,16 @@
+{
+  "name": "Festival",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "gary liang",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.1.1",
+    "electron-packager": "^15.2.0"
+  }
+}
