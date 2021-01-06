@@ -1,7 +1,21 @@
-*** 安装
+**安装**
 
+```
 npm install
+```
 
-npm start 
 
+**运行**
+
+```
+npm start
+```
+
+
+**打包**
+
+```
 electron-packager .
+```
+
+
