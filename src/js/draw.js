@@ -189,7 +189,7 @@ colors = [
 ];
 
 
-let strArr = ['新年快乐','2021','happy new year']
+let strArr = ['新年快乐','2021','happy new year','恭贺新春','一帆风顺','二龙腾飞','三羊开泰','四季平安','五福临门','六六大顺','七星高照','八方来财','九九同心','十全十美']
 let nowIndex = 0
 gravity = 0; // 1 - -1
 duration = 0.4; // 0.1-0.99
@@ -205,5 +205,5 @@ update();
 
 setInterval(() => {
     this.change(strArr[nowIndex])
-    nowIndex>=2?nowIndex=0:nowIndex++
-}, 10*1000);
+    nowIndex>=strArr.length-1?nowIndex=0:nowIndex++
+}, 1*1000);

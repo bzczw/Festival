@@ -1,13 +1,17 @@
-const { app, BrowserWindow } = require('electron')
-
+const { app, BrowserWindow, ipcMain } = require('electron')
+// let ipcMain = require('electron').ipcMain;
+let win
 function createWindow () {
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 800,
     height: 500,
     transparent: true,
-    frame: false
+    frame: false,
+    webPreferences: {
+      nodeIntegration: true, // 是否集成 Nodejs,把之前预加载的js去了，发现也可以运行
+    }
   })
-
+  win.openDevTools()
   win.loadFile('index.html')
 }
 
@@ -23,4 +27,8 @@ app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow()
   }
+})
+
+ipcMain.on('window-close', function() {
+  win.close();
 })
