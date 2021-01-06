@@ -11,7 +11,7 @@ function createWindow () {
       nodeIntegration: true, // 是否集成 Nodejs,把之前预加载的js去了，发现也可以运行
     }
   })
-  win.openDevTools()
+  // win.openDevTools()
   win.loadFile('index.html')
 }
 
